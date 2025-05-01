@@ -34,5 +34,9 @@ public class BerkeleyAlgorithm {
         for (Clock clock : clocks) {
             System.out.println(clock);
         }
+
+        // Calcular estadísticas
+        SynchronizationStatistics stats = new SynchronizationStatistics(clocks);
+        stats.displayStatistics();
     }
 }
