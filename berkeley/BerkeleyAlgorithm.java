@@ -20,9 +20,13 @@ public class BerkeleyAlgorithm {
         }
     }
 
-    // Mostrar tiempos originales
+        // Mostrar tiempos originales
         System.out.println("=== Tiempos originales ===");
         for (Clock clock : clocks) {
         System.out.println(clock);
+
+        // Crear el coordinador de Berkeley e iniciar la sincronización
+        BerkeleyCoordinator coordinator = new BerkeleyCoordinator(clocks);
+        coordinator.synchronize();
     }
 }
