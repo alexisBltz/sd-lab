@@ -20,4 +20,16 @@ public class SynchronizationStatistics {
         System.out.println("Desviación estándar: " + stdDev + " ms");
         System.out.println("Tiempo promedio: " + avgTime + " ms");
     }
+
+    // Calcula el tiempo promedio de los relojes
+    private double calculateStandardDeviation() {
+        long avg = calculateAverageTime();
+        double sum = 0;
+
+        for (Clock clock : clocks) {
+            sum += Math.pow(clock.getTime() - avg, 2);
+        }
+
+        return Math.sqrt(sum / clocks.size());
+    }
 }
