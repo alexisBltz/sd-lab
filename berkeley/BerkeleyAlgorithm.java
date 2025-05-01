@@ -19,4 +19,10 @@ public class BerkeleyAlgorithm {
             clocks.add(new Clock(i, i == 1 || i == 3));
         }
     }
+
+    // Mostrar tiempos originales
+        System.out.println("=== Tiempos originales ===");
+        for (Clock clock : clocks) {
+        System.out.println(clock);
+    }
 }
