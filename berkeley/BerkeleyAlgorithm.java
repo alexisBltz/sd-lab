@@ -28,5 +28,11 @@ public class BerkeleyAlgorithm {
         // Crear el coordinador de Berkeley e iniciar la sincronización
         BerkeleyCoordinator coordinator = new BerkeleyCoordinator(clocks);
         coordinator.synchronize();
+
+        // Mostrar tiempos después de la sincronización
+        System.out.println("\n=== Tiempos después de sincronización ===");
+        for (Clock clock : clocks) {
+            System.out.println(clock);
+        }
     }
 }
