@@ -12,6 +12,11 @@ import java.util.List;
  */
 public class BerkeleyAlgorithm {
     public static void main(String[] args) {
-
+        // Crear varios relojes con tiempos desincronizados
+        List<Clock> clocks = new ArrayList<>();
+        for (int i = 1; i <= 5; i++) {
+            // Solo el reloj 1 y 3 son elegibles para ser coordinador en este ejemplo
+            clocks.add(new Clock(i, i == 1 || i == 3));
+        }
     }
 }
