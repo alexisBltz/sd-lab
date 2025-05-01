@@ -32,4 +32,13 @@ public class SynchronizationStatistics {
 
         return Math.sqrt(sum / clocks.size());
     }
+
+    // Calcula la desviación estándar de los tiempos de los relojes
+    private long calculateAverageTime() {
+        long sum = 0;
+        for (Clock clock : clocks) {
+            sum += clock.getTime();
+        }
+        return sum / clocks.size();
+    }
 }
