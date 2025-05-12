@@ -18,12 +18,12 @@ public class BerkeleyAlgorithm {
             // Solo el reloj 1 y 3 son elegibles para ser coordinador en este ejemplo
             clocks.add(new Clock(i, i == 1 || i == 3));
         }
-    }
 
         // Mostrar tiempos originales
         System.out.println("=== Tiempos originales ===");
         for (Clock clock : clocks) {
-        System.out.println(clock);
+            System.out.println(clock);
+        }
 
         // Crear el coordinador de Berkeley e iniciar la sincronización
         BerkeleyCoordinator coordinator = new BerkeleyCoordinator(clocks);
